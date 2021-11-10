@@ -1,0 +1,18 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.0.0
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'tmp/**/*'
+
+Metrics/MethodLength:
+  Max: 100
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context', 'it', 'before']
+  Exclude:
+    - 'db/seeds.rb'
