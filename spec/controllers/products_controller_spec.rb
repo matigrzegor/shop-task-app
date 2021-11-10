@@ -34,6 +34,8 @@ RSpec.describe ProductsController, type: :controller do
     end
 
     before do
+      request.env['HTTP_ACCEPT'] = 'application/json'
+
       product_one
       product_two
       product_three

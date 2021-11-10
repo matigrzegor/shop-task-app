@@ -9,7 +9,9 @@ class ProductsController < ApplicationController
     @page = result[:page]
     @per_page = result[:per_page]
 
-    render 'products/index.json.jbuilder'
+    respond_to do |format|
+      format.json
+    end
   end
 
   private
